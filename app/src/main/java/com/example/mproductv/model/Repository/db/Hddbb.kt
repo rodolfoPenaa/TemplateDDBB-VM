@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.mproductv.model.SHero
+import com.example.mproductv.model.remote.SHero
 
 
 @Database(entities = [SHero::class], version = 1, exportSchema = false)
