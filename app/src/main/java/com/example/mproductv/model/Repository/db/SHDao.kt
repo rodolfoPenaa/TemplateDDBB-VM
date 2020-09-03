@@ -1,24 +1,19 @@
 package com.example.mproductv.model.Repository.db
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import com.example.mproductv.model.remote.SHero
+import androidx.room.*
+import com.example.mproductv.model.SHero
 
 @Dao
 interface SHDao {
 
-    @Insert
-        fun insertHeroes(sHeroes: List<SHero>){    //Suspended
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertHeroes(sHeroes: List<SHero>)
 
-    } //Lv
-
-    @Query ("SELECT * FROM hereatable ORDER BY id ASC")
+    @Query ("SELECT * FROM here_a_table ORDER BY id ASC")
        fun getDDBBsHeroes(): LiveData<List<SHero>>
 
-    @Query ("SELECT * FROM hereatable WHERE id")
+    @Query ("SELECT * FROM here_a_table WHERE id")
        fun getSelected():LiveData<SHero>
 
     @Delete fun fullClean(){

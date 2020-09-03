@@ -3,20 +3,26 @@ package com.example.mproductv.viewM
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.mproductv.model.Repository.SHRepository
+import com.example.mproductv.model.Repository.remote.SHRepository
 import com.example.mproductv.model.Repository.db.Hddbb
 import com.example.mproductv.model.Repository.db.SHDao
-import com.example.mproductv.model.remote.SHero
+import com.example.mproductv.model.SHero
 
 class ViewModel(application: Application): AndroidViewModel(application) {
-    lateinit var rDATA: SHRepository
+    /*lateinit var rDATA: SHRepository
     lateinit var shDAO: SHDao
     init {
-        shDAO= Hddbb.iDDBB(application).sHdao()
-        rDATA= SHRepository(application,shDAO)
+        shDAO= Hddbb.getDDBBB(application).dataBase()
+        rDATA= SHRepository(application)
+    }*/
+    private val forRepository = SHRepository(application)
+    private val list1: LiveData<List<SHero>> = forRepository.passtoVM()
+
+    fun datafromServer(){
+        return forRepository.fetchDATAs()
     }
-    fun dDDbb (): LiveData<List<SHero>>{
-        return rDATA.observedDATA()
+    fun getDatar00m(): LiveData<List<SHero>>{
+        return list1
     }
 
 }

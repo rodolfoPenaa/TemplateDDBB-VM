@@ -15,42 +15,39 @@
 
         <ImageView
             android:id="@+id/SHimage"
-            android:layout_width="70dp"
-            android:layout_height="0dp"
-            android:layout_gravity="clip_vertical"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="77dp"
-            app:layout_constraintBottom_toTopOf="@+id/names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="38dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/id"
+            android:id="@+id/idN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="58dp"
+            android:layout_marginTop="19dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/names"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            app:layout_constraintBottom_toTopOf="@+id/apodos"
-            app:layout_constraintStart_toStartOf="@+id/SHimage"
-            app:layout_constraintTop_toBottomOf="@+id/SHimage" />
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="167dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/apodos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="577dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/names"
-            app:layout_constraintTop_toBottomOf="@+id/names" />
+            android:layout_marginTop="109dp"
+            android:layout_marginEnd="167dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

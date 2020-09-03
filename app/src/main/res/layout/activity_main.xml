@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".viewM.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -20,7 +20,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rViewSH"
-        android:layout_width="0dp"
+        android:layout_width="400dp"
         android:layout_height="711dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"

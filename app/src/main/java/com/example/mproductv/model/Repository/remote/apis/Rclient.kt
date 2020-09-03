@@ -1,12 +1,11 @@
-package com.example.mproductv.model.Repository
+package com.example.mproductv.model.Repository.remote.apis
 
-import com.example.mproductv.model.Repository.apis.SHapi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class Rclient {
     companion object{
-        private const val BASE_URL = "https://akabab.github.io/superhero-api/api"
+        private const val BASE_URL = "https://akabab.github.io/superhero-api/api/"
         fun retrofitInstance(): SHapi {
             val retrofit = Retrofit.Builder().
                     baseUrl(BASE_URL).

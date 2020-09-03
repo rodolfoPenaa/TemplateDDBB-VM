@@ -1,4 +1,4 @@
-package com.example.mproductv.model
+package com.example.mproductv.model.Repository.remote.apis
 
 class SHimage(val xs: String,
               val sm: String,
