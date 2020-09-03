@@ -13,8 +13,8 @@ interface SHDao {
     @Query ("SELECT * FROM here_a_table ORDER BY id ASC")
        fun getDDBBsHeroes(): LiveData<List<SHero>>
 
-    @Query ("SELECT * FROM here_a_table WHERE id")
-       fun getSelected():LiveData<SHero>
+    @Query ("SELECT * FROM here_a_table WHERE id=:id")
+       fun getSelected(id: Int):LiveData<SHero>
 
     @Delete fun fullClean(){
     }

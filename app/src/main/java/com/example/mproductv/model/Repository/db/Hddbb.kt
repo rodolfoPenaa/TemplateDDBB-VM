@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.mproductv.model.SHero
 
 
-@Database(entities = [SHero::class], version = 200, exportSchema = false)
+@Database(entities = [SHero::class], version = 60212, exportSchema = false)
 abstract class Hddbb: RoomDatabase() {
 
     abstract fun dataBase(): SHDao

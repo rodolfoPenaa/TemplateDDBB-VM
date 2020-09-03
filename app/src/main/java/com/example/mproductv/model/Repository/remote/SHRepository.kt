@@ -1,6 +1,7 @@
 package com.example.mproductv.model.Repository.remote
 
 import android.content.Context
+import android.content.LocusId
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.mproductv.model.Repository.db.Hddbb
@@ -38,9 +39,10 @@ data class SHRepository (val context: Context) {
 
         })
     }
-
     fun passtoVM(): LiveData<List<SHero>>{
         return list0
     }
-
+    fun passtoFragment(id:Int): LiveData<SHero>{
+        return instanceDDBB.dataBase().getSelected(id)
+    }
 }

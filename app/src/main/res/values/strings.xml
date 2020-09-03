@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MProductV</string>
     <string name="heroes">Heroes!</string>
+    <string name="alpha_version">Alpha.Version</string>
+    <string name="detail_name">Full Name:</string>
+    <string name="alter_egos">Alter Egos:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
