@@ -9,7 +9,8 @@ import com.example.mproductv.R
 import com.example.mproductv.model.SHero
 import kotlinx.android.synthetic.main.item_shero_list.view.*
 
-data class SheroesADP(var mDATAset: List<SHero>/*, var clickListener: ICLICKSheroesADP*/) :RecyclerView.Adapter<SheroesADP.SheroesHolder>() {
+data class SheroesADP(var mDATAset: List<SHero> /*var clickListener: ICLICKSheroesADP)*/)
+    :RecyclerView.Adapter<SheroesADP.SheroesHolder>() {
 
  fun updateDATA(listHeroes:List<SHero>){
     mDATAset=listHeroes
@@ -30,7 +31,7 @@ inner class SheroesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     }*/
 }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SheroesHolder {
-        val view: View= LayoutInflater.from(parent.context).inflate(R.layout.item_shero_list, parent,false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_shero_list, parent,false)
         return SheroesHolder(view)
     }
 
@@ -44,8 +45,6 @@ inner class SheroesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //clickListener.heroFromAdapter(mDATAset.get(position).id)
     }
 
-
-
     override fun getItemCount(): Int {
         return mDATAset.size
     }
@@ -53,7 +52,7 @@ inner class SheroesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun heroFromAdapter (id:Int)
     }
     interface ClickImage{
-        fun fragmentADP()
+        fun fragmentADP(id: Int,url:String)
     }
 }
 

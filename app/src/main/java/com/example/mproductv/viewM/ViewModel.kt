@@ -19,6 +19,7 @@ class ViewModel(application: Application): AndroidViewModel(application) {
         rDATA= SHRepository(application)
     }*/
     private val forRepository = SHRepository(application)
+
     private val list1: LiveData<List<SHero>> = forRepository.passtoVM()
 
     lateinit var her0: LiveData<SHero>
