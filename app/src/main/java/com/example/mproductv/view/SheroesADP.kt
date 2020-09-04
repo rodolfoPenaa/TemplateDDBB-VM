@@ -18,7 +18,7 @@ data class SheroesADP(var mDATAset: List<SHero> /*var clickListener: ICLICKShero
 }
 
 inner class SheroesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    // val idTextV= itemView.findViewById<TextView>(R.id.idN)
+    // val idTextV= itemView.findViewById<TextView>(R.id.idN) {OLD}
     val idTextV= itemView.idN
     val nameTextV= itemView.names
     val appearencia= itemView.apodos
@@ -43,16 +43,13 @@ inner class SheroesHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         Glide.with(holder.itemView.context).load(mDATAset[position].images.sm).circleCrop().into(holder.pngPhoto)
         //Picasso.get().load(mDATAset[position].images.sm).resize(100,100).into(holder.pngPhoto)
         //clickListener.heroFromAdapter(mDATAset.get(position).id)
-    }
 
+    }
     override fun getItemCount(): Int {
         return mDATAset.size
     }
     interface ICLICKSheroesADP{
         fun heroFromAdapter (id:Int)
-    }
-    interface ClickImage{
-        fun fragmentADP(id: Int,url:String)
     }
 }
 

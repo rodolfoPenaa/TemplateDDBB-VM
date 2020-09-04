@@ -15,41 +15,30 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_shero_list.*
 
 
-class MainActivity : AppCompatActivity()/*, SheroesADP.ICLICKSheroesADP */{
+class MainActivity : AppCompatActivity()/*, SheroesADP.ICLICKSheroesADP */ {
 
-    private lateinit var mViewModel: ViewModel
-    private lateinit var shAdapter: SheroesADP
+    private lateinit var heroesFragment: TestFragment
+
     //private lateinit var superherosFragment: HeroDetailsFragment
-    private var lisTEST: List<SHero> = ArrayList<SHero>()
-    private lateinit var fragment: TestFragment
+    //private var lisTEST: List<SHero> = ArrayList<SHero>()
+
+    // private lateinit var fragmentHEROs: TestFragment // TO COMPANION OBJECT
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mViewModel = ViewModelProvider(this).get(ViewModel::class.java)
-        mViewModel.datafromServer()
-        mViewModel.getDatar00m().observe(this, Observer {
-            shAdapter.updateDATA(it)
+        //supportFragmentManager.beginTransaction().add(R.id.framelayout_fragment, TestFragment.newInstance).commit() USE TO JAVA INFLATE FRAGMENT
 
-        })
-    }
-        /*
+/*
         shAdapter = SheroesADP(lisTEST, this) //PARAMETROS DEL CONSTRUCTOR DE LA CLASS ADAPTER
         rViewSH.adapter = shAdapter
         rViewSH.layoutManager = LinearLayoutManager(this)
         mViewModel.her0.observe(this, Observer {
             Log.d("HERO FROM CLICK", it.name)
         })
+*/
+
+
     }
-    override fun heroFromAdapter(id: Int) {
-        mViewModel.getaHero(id)
-        supportFragmentManager
-        .beginTransaction()
-        .replace(R.id., TestFragment.newInstance())
-        .commit()
-        }*/
-
-
-
 }

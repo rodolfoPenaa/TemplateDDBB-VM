@@ -1,6 +1,5 @@
 package com.example.mproductv.view
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,11 +33,10 @@ class HeroDetailsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(HeroDetailsViewModel::class.java)
-
+//        viewModel = ViewModelProviders.of(this).get(HeroDetailsViewModel::class.java)
         //adapterFragment = SheroesADP(listFragment,)
 //        rViewSH.adapter = adapterFragment
-        rViewSH.layoutManager= LinearLayoutManager(context)
+        //rViewSH.layoutManager= LinearLayoutManager(context)
        //adapterFragment.updateDATA(listFragment)
     }
 
